@@ -133,12 +133,36 @@ export default function Layout({ children }) {
           pointer-events: auto;
         }
         
+        /* Mobile header adjustments */
+        @media (max-width: 768px) {
+          header {
+            min-height: 120px;
+          }
+          
+          header h1 {
+            max-width: calc(100% - 120px);
+            margin-left: auto;
+            margin-right: auto;
+          }
+        }
+        
         /* Rainbow Kit ConnectButton - Monad Purple styling (only the header button) */
         header [data-rk] button,
         header button[aria-label*="Connect"],
         header [data-rk] > div > button {
           background-color: #6E54FF !important;
           color: #FFFFFF !important;
+          font-size: 0.875rem !important;
+          padding: 0.5rem 0.75rem !important;
+        }
+        
+        @media (min-width: 768px) {
+          header [data-rk] button,
+          header button[aria-label*="Connect"],
+          header [data-rk] > div > button {
+            font-size: 1rem !important;
+            padding: 0.625rem 1rem !important;
+          }
         }
         
         header [data-rk] button:hover,
