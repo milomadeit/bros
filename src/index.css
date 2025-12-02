@@ -1,0 +1,209 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* :root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+} */
+
+
+
+@layer base {
+  :root {
+    /* LIGHT MODE */
+    --background: 42 9% 98%; /* #FBFAF9 - Monad Off-White */
+    --foreground: 0 0% 0%; /* #000000 - Black font */
+    --shadow-color: 252 32% 5%; /* #0E091C - Dark Purple shadows */
+    --border-color: 252 32% 5%; /* #0E091C - Dark Purple borders */
+    
+    --card: 0 0% 100%; /* White cards */
+    --card-foreground: 0 0% 0%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 0%;
+    --primary: 254 83% 68%; /* #6E54FF - Monad Purple */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 254 83% 95%; /* Light Purple */
+    --secondary-foreground: 0 0% 0%;
+    --muted: 254 83% 95%;
+    --muted-foreground: 252 32% 30%;
+    --accent: 192 100% 78%; /* Monad Cyan */
+    --accent-foreground: 0 0% 0%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 252 32% 5%; /* #0E091C - Dark Purple borders */
+    --input: 252 32% 5%;
+    --ring: 254 83% 68%;
+    --chart-1: 192 100% 78%; /* Monad Cyan */
+    --chart-2: 318 100% 79%; /* Pink #FF8EE4 */
+    --chart-3: 32 100% 64%; /* Orange #FFAE45 */
+    --chart-4: 204 92% 91%; /* Light Blue #B9E3F9 */
+    --chart-5: 254 83% 68%; /* Monad Purple */
+    --radius: 0.5rem;
+    --sidebar-background: 42 9% 98%;
+    --sidebar-foreground: 0 0% 0%;
+    --sidebar-primary: 254 83% 68%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 254 83% 95%;
+    --sidebar-accent-foreground: 0 0% 0%;
+    --sidebar-border: 252 32% 5%;
+    --sidebar-ring: 254 83% 68%;
+    
+    /* Monad brand colors */
+    --monad-purple: 254 83% 68%; /* #6E54FF */
+    --monad-dark-purple: 252 32% 5%; /* #0E091C */
+    --monad-light-purple: 254 83% 95%; /* #DDD7FE */
+    --monad-cyan: 192 100% 78%; /* #85E6FF */
+    --monad-light-blue: 204 92% 91%; /* #B9E3F9 */
+    --monad-pink: 318 100% 79%; /* #FF8EE4 */
+    --monad-orange: 32 100% 64%; /* #FFAE45 */
+    --monad-off-white: 42 9% 98%; /* #FBFAF9 */
+  }
+  .dark {
+    /* DARK MODE */
+    --background: 252 32% 5%; /* #0E091C - Dark Purple */
+    --foreground: 42 9% 98%; /* #FBFAF9 - Monad Off-White font */
+    --shadow-color: 254 83% 95%; /* #DDD7FE - Light Purple shadows */
+    --border-color: 254 83% 95%; /* #DDD7FE - Light Purple borders */
+    
+    --card: 252 32% 8%;
+    --card-foreground: 42 9% 98%;
+    --popover: 252 32% 8%;
+    --popover-foreground: 42 9% 98%;
+    --primary: 254 83% 68%; /* Monad Purple */
+    --primary-foreground: 42 9% 98%;
+    --secondary: 252 32% 12%;
+    --secondary-foreground: 42 9% 98%;
+    --muted: 252 32% 12%;
+    --muted-foreground: 254 83% 95%;
+    --accent: 192 100% 78%; /* Monad Cyan */
+    --accent-foreground: 42 9% 98%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 42 9% 98%;
+    --border: 254 83% 95%; /* #DDD7FE - Light Purple borders */
+    --input: 254 83% 95%;
+    --ring: 254 83% 68%;
+    --chart-1: 192 100% 78%; /* Monad Cyan */
+    --chart-2: 318 100% 79%; /* Pink */
+    --chart-3: 32 100% 64%; /* Orange */
+    --chart-4: 204 92% 91%; /* Light Blue */
+    --chart-5: 254 83% 68%; /* Monad Purple */
+    --radius: 0.5rem;
+    --sidebar-background: 252 32% 5%;
+    --sidebar-foreground: 42 9% 98%;
+    --sidebar-primary: 254 83% 68%;
+    --sidebar-primary-foreground: 42 9% 98%;
+    --sidebar-accent: 252 32% 12%;
+    --sidebar-accent-foreground: 42 9% 98%;
+    --sidebar-border: 254 83% 95%;
+    --sidebar-ring: 254 83% 68%;
+    
+    /* Monad brand colors - same in dark mode */
+    --monad-purple: 254 83% 68%; /* #6E54FF */
+    --monad-dark-purple: 252 32% 5%; /* #0E091C */
+    --monad-light-purple: 254 83% 95%; /* #DDD7FE */
+    --monad-cyan: 192 100% 78%; /* #85E6FF */
+    --monad-light-blue: 204 92% 91%; /* #B9E3F9 */
+    --monad-pink: 318 100% 79%; /* #FF8EE4 */
+    --monad-orange: 32 100% 64%; /* #FFAE45 */
+    --monad-off-white: 42 9% 98%; /* #FBFAF9 */
+  }
+}
+
+
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+  }
+  body {
+    @apply bg-background text-foreground;
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+  }
+}
+
+/* Rainbow Kit ConnectButton - Monad Purple styling (only the header button, not modal) */
+header [data-rk] button,
+header [data-rk] > div > button,
+header button[data-testid="rk-connect-button"],
+header button[data-testid="rk-account-button"] {
+  background-color: #6E54FF !important;
+  color: #FFFFFF !important;
+}
+
+header [data-rk] button:hover,
+header [data-rk] > div > button:hover,
+header button[data-testid="rk-connect-button"]:hover,
+header button[data-testid="rk-account-button"]:hover {
+  background-color: #5a42e6 !important;
+}
