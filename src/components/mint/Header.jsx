@@ -4,7 +4,7 @@ import { ConnectButton } from '@rainbow-me/rainbowkit';
 
 export default function Header() {
   return (
-    <header className="text-center py-6 pt-20 md:py-10 md:pt-10 relative px-4">
+    <header className="text-center py-6 pt-20 md:py-10 md:pt-10 relative px-2 sm:px-4">
       <div 
         className="absolute top-2 right-2 md:top-8 md:right-8 flex items-center gap-2 md:gap-3 theme-toggle-container" 
         style={{ 
@@ -19,11 +19,16 @@ export default function Header() {
           <ThemeToggle />
         </div>
       </div>
-      <h1 className="text-4xl sm:text-5xl md:text-8xl font-bold mb-2 md:mb-4 relative px-2" style={{
-        color: '#6E54FF',
-        textShadow: '4px 4px 0px hsl(var(--shadow-color))',
-        zIndex: 1
-      }}>
+      <h1 
+        className="font-bold mb-2 md:mb-4 relative whitespace-nowrap" 
+        style={{
+          color: '#6E54FF',
+          textShadow: 'clamp(2px, 0.5vw, 6px) clamp(2px, 0.5vw, 6px) 0px hsl(var(--shadow-color))',
+          zIndex: 1,
+          fontSize: 'clamp(2rem, 8vw, 6rem)',
+          lineHeight: '1.1'
+        }}
+      >
         GNARLY BROS
       </h1>
       <p className="text-base md:text-2xl font-bold text-foreground">Built on Monad</p>

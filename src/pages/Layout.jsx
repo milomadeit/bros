@@ -138,11 +138,20 @@ export default function Layout({ children }) {
           header {
             min-height: 120px;
           }
-          
+        }
+        
+        /* Ensure header text stays on one line and scales properly */
+        header h1 {
+          white-space: nowrap;
+          overflow: visible;
+          transform: translateX(0);
+        }
+        
+        /* Account for button space on mobile without constraining text size */
+        @media (max-width: 480px) {
           header h1 {
-            max-width: calc(100% - 120px);
-            margin-left: auto;
-            margin-right: auto;
+            padding-left: 0.25rem;
+            padding-right: 0.25rem;
           }
         }
         
